@@ -1,0 +1,36 @@
+PHP
+1. All Webservices are moved to ws folder for better management. Initially they were on root.
+2. Extra non-usable files are deleted.
+3. For Webservices, the connection string, constants and other configurations are moved to single file. Initially, it was across multiple files.
+4.change in query for update_payments in driver_rides.php webservices
+5. Images path corrected in admin - /admin/view_driver.php, driver_add.php, manage_driver.php, manage_passenger.php, view_passenger.php, passenger_add.php
+6. Error of multiple 0 resolved for driver. Changes in webservices in /WS/ cab_money.php
+7. When driver registers, he will be inactive. Admin has to activate him and after that driver can login. Changes in /ws/checklogin.php, user_register.php
+
+
+
+ANDROID APP
+1. APP Updated for Latest Google Play API Library.
+2. Few depricated Function are updated in APP
+3. Exception Handling added for GOOGLE PPLACES API so that app should not cresh again and again. ProfileActivity1.java edited. Changes in ProfileActivity1.java at line number 322,387
+4. "Unfortunately stop" error resolved in UpdateProfilePicture.java. This problem is because of null context so initialize context before attachslidemenu() at line 72.
+
+5. Unable to Draw Route 
+change in url in getTimeDistanceBetweenMapPoints() at line 216 and right url is
+String url = "https://maps.googleapis.com/maps/api/directions/"
+				+ "json" + "?" + "&origin=" + source_lat
+				+ "," + source_long + "&destination=" + dest_lat + ","
+				+ dest_long + "&" + "sensor=false" + "&" + "units=" + units;
+
+
+
+6. Unable to exit in exit dailog from both profile. So change in ConnectionDialogClickListener anonymus class dialog_id to button on line no 616 in DriverActivity.java and line no 525 in ProfileActivity.java
+
+7. Thre was error in .addApi(Plus.API,null) and the error is null values are not allowed. So remove null from googleplusActivity, in oncreate method line no 74.
+
+8. In some mobile phones there is problem of No location acess so make changes in epb.helper package, Gps.util class line no 52 
+9. In Profile - Upload Pic, After touch on menu icon unfortunately stop so make changes in UpdateProfilePicture.java at line 282. and add slide menu in corresponding xml layout file. Removed webview client and add code for actionbar.
+10.There is problem in back button on Refer activity, so add code for onKeyDown method at line no 319.
+10. Problem in back press in some device so change code n Splash activty at line no 46
+11. For first time there is string to update profile on driver layout so make changes in driver activity at  130-137
+

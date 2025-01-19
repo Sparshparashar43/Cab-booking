@@ -1,0 +1,577 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Cab Booking - Cab Booking V2</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="EPB IT Services ">
+	<meta name="copyright" content="EPB IT Services ">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2015-05-01T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#008C9E;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #008C9E, #006673);
+			  background-image: -ms-linear-gradient(top, #008C9E, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+			  background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+			  background-image: -o-linear-gradient(top, #008C9E, #006673);
+			  background-image: linear-gradient(top, #008C9E, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #008C9E #008C9E #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-cab-booking">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#setup_eclipse_adt" title="Setup Eclipse ADT">Setup Eclipse ADT</a></li>
+			<li><a href="#folder_structure" title="Folder Structure">Folder Structure</a></li>
+			<li><a href="#import_android_project" title="Import Android Project">Import Android Project</a></li>
+			<li><a href="#add_libraries" title="Add Libraries">Add Libraries</a></li>
+			<li><a href="#used_sdk_and_library_detail" title="Used sdk and library detail">Used sdk and library detail</a></li>
+			<li><a href="#change_application_name" title="Change Application Name">Change Application Name</a></li>
+			<li><a href="#change_icons_logo" title="Change  Icons &  Logo">Change  Icons &  Logo</a></li>
+			<li><a href="#change_background" title="Change Background">Change Background</a></li>
+			<li><a href="#change_webservices_urls" title="Change webservices Urls">Change webservices Urls</a></li>
+			<li><a href="#google_developer_console" title="Google Developer Console">Google Developer Console</a></li>
+			<li><a href="#change_notification_sender_id" title="Change Notification Sender ID">Change Notification Sender ID</a></li>
+			<li><a href="#change_google_maps_api_key" title="Change Google Maps API Key">Change Google Maps API Key</a></li>
+			<li><a href="#chang_google_browser_key" title="Chang Google Browser Key">Chang Google Browser Key</a></li>
+			<li><a href="#set_up_web_admin_panel" title="Set up Web Admin Panel">Set up Web Admin Panel</a></li>
+			<li><a href="#set_up_database" title="Set Up Database">Set Up Database</a></li>
+			<li><a href="#upload_and_set_up_php_admin" title="Upload and Set UP PHP Admin">Upload and Set UP PHP Admin</a></li>
+			<li><a href="#change_layout_of_pages_via_webservices" title="Change layout of pages via webservices">Change layout of pages via webservices</a></li>
+			<li><a href="#change_paypal_key" title="Change PayPal Key">Change PayPal Key</a></li>
+			<li><a href="#paypal_live_implementation" title="PayPal Live Implementation">PayPal Live Implementation</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright EPB IT Services  2015<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Cab Booking</h1>
+	<h2>Cab Booking V2</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 11/26/2014</li>
+	<li>latest update: 05/01/2015</li>
+	<li>by: EPB IT Services </li>
+	<li><a href=""></a></li>
+	<li>email: <a href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#101;&#112;&#114;&#111;&#102;&#105;&#116;&#98;&#111;&#111;&#115;&#116;&#101;&#114;&#46;&#99;&#111;&#109;">&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#101;&#112;&#114;&#111;&#102;&#105;&#116;&#98;&#111;&#111;&#115;&#116;&#101;&#114;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p></p>
+	</section>
+	
+	<section id="setup_eclipse_adt">
+	<div class="page-header"><h3>Setup Eclipse ADT</h3><hr class="notop"></div>
+<h3 style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
+	<span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 21.1200008392334px;">If you haven&#39;t downloaded Eclipse ADT yet, you can download it&nbsp;</span><a href="http://developer.android.com/sdk/index.html" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; color: rgb(0, 0, 153); text-decoration: none; cursor: pointer; line-height: 21.1200008392334px;" target="blank">here</a><span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 21.1200008392334px;">. Click Download the SDK ADT Bundle for XXXX. XXXX should be the operating system you are using automaticaly recognised by the site.</span></h3>
+<h3 style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
+	<span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 1.65em;">For Windows users, you may look to&nbsp;</span><a href="http://www.youtube.com/watch?v=_RNNgo79d2s" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: 13px; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153); text-decoration: none; cursor: pointer; line-height: 1.65em;" target="blank">this video</a><span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 1.65em;">&nbsp;on how to install and set-up Eclipse ADT.</span></h3>
+<h3 style="margin: 0px 0px 25px; padding: 0px; border: 0px; outline: 0px; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 1.65em; color: rgb(56, 56, 56);">
+	For Ubuntu users, you may look to&nbsp;<a href="http://www.youtube.com/watch?v=c9_Nhmeks0U" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153); text-decoration: none; cursor: pointer;" target="blank">this video</a>&nbsp;on how to install and set-up Eclipse ADT.</h3>
+<h3 style="margin: 0px 0px 25px; padding: 0px; border: 0px; outline: 0px; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 1.65em; color: rgb(56, 56, 56);">
+	For Linux Mint users, you may look to&nbsp;<a href="http://www.youtube.com/watch?v=unF0alwZPGA" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153); text-decoration: none; cursor: pointer;" target="blank">this video</a>&nbsp;on how to install and set-up Eclipse ADT.</h3>
+<h3 style="margin: 0px 0px 25px; padding: 0px; border: 0px; outline: 0px; font-size: 13px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; vertical-align: baseline; line-height: 1.65em; color: rgb(56, 56, 56);">
+	For Mac OS X users, you may look to&nbsp;<a href="http://www.youtube.com/watch?v=ajQ2-K1yeH8" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; color: rgb(0, 0, 153); text-decoration: none; cursor: pointer;" target="blank">this video</a>&nbsp;on how to install and set-up Eclipse ADT.</h3>
+<p>
+	<img alt="" src="assets/images/image_1.png" style="width: 466px; height: 519px;"></p>
+<p>
+	<img alt="" src="assets/images/image_2.png"></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="folder_structure">
+	<div class="page-header"><h3>Folder Structure</h3><hr class="notop"></div>
+<h3>
+	Cabbooking.zip contains following folders. Unzip it before proceeding further.</h3>
+<p>
+	<strong>--Cabbooking_app</strong></p>
+<p>
+	-- --CabBookingHome</p>
+<p>
+	-- --appcompat_v7</p>
+<p>
+	-- --google-play-services_lib</p>
+<p>
+	-- --LibSlideMenu</p>
+<p>
+	<strong>--Cabbooking-PHP</strong></p>
+<p>
+	-- --admin</p>
+<p>
+	-- --css</p>
+<p>
+	-- --font-awesome</p>
+<p>
+	-- --images</p>
+<p>
+	-- --includes</p>
+<p>
+	-- --js</p>
+<p>
+	-- --profile_pic</p>
+<p>
+	-- --ws</p>
+<p>
+	<strong>--documentation</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="import_android_project">
+	<div class="page-header"><h3>Import Android Project</h3><hr class="notop"></div>
+<h3>
+	Import the unzipped project to Eclipse:</h3>
+<p>
+	&nbsp;</p>
+<ol>
+	<li>
+		Select File Menu &gt;&gt; Import</li>
+	<li>
+		Select Existing Projects into Workplace and click next.&nbsp;</li>
+	<li>
+		Click Browse to browse the unzipped project (Cabbooking_app-&gt;CabBookingHome), mark copy into workspace, then click OK .&nbsp;</li>
+	<li>
+		Click Finish, you could see the project imported to Eclipse as shown below &nbsp;</li>
+</ol>
+<p>
+	<img alt="" src="assets/images/image_3.png"></p>
+<p>
+	<img alt="" src="assets/images/image_4.png"></p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="add_libraries">
+	<div class="page-header"><h3>Add Libraries</h3><hr class="notop"></div>
+<p>
+	We have used three standard libraries in this project. you can find these libraries in&nbsp;<strong>Cabbooking_app&nbsp;</strong>folder</p>
+<ul>
+	<li>
+		appcompat_v7</li>
+	<li>
+		google-play-services_lib</li>
+	<li>
+		LibSlideMenu</li>
+</ul>
+<h3>
+	Import these libraries in workspace.</h3>
+<ol>
+	<li>
+		Create a new project to generate appcompbat library for your project Goto File&gt;New&gt;Android Application Project</li>
+	<li>
+		Provide any name to the project and click next ,next ,next&nbsp; and finish.</li>
+	<li>
+		appcombat_v7 library is automatically generated in your workspace as shown in below images.</li>
+	<li>
+		Import google_play_services as well.</li>
+	<li>
+		Right click on project,Goto properties&gt;Android&gt;Add</li>
+	<li>
+		Select appcombat_v7 ,LibSlideMenu and google_play_services,&nbsp;Click Ok.</li>
+	<li>
+		Your project is successfully imported.</li>
+</ol>
+<p style="margin: 18px 0px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 26px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="assets/images/image_5.png"></p>
+<p style="margin: 18px 0px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 26px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</p>
+<p style="margin: 18px 0px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 26px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="assets/images/image_6.png"></p>
+<p style="margin: 18px 0px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 26px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="assets/images/image_7.png"></p>
+<p style="margin: 18px 0px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 26px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="assets/images/image_8.png"></p>
+<p style="margin: 18px 0px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 26px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	<img alt="" src="http://epbitservices.com/androidapps/bookyourcab/Capture26.PNG"></p>
+<div>
+	&nbsp;</div>
+</section>
+<section id="used_sdk_and_library_detail">
+	<div class="page-header"><h3>Used sdk and library detail</h3><hr class="notop"></div>
+<h3>
+	This application and all the libraries are build on android api level 19.</h3>
+<p>
+	To change build verion to API Level 19</p>
+<ol>
+	<li>
+		Go on your project , right click on it and select properties</li>
+	<li>
+		Select android on left pane and check &nbsp;android api level 19 (Android 4.4.2)<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/targetSdk.JPG" style="width: 615px; height: 683px;"></li>
+	<li>
+		Click apply and ok .</li>
+	<li>
+		Clean your project by clicking Project</li>
+</ol>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/clean.JPG" style="width: 472px; height: 325px;"></p>
+<p>
+	click ok and run your app.</p>
+</section>
+<section id="change_application_name">
+	<div class="page-header"><h3>Change Application Name</h3><hr class="notop"></div>
+<h3 style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	Change Application Name</h3>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</p>
+<ol>
+	<li style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+		Expand your project</li>
+	<li style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+		Goto res folder&gt;values&gt;strings.xml</li>
+</ol>
+<h3 style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	&nbsp;</h3>
+<p>
+	<img alt="" src="assets/images/image_9.png" style="font-size: 26px;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/Capture12.PNG" style="width: 594px; height: 161px;"></p>
+</section>
+<section id="change_icons_logo">
+	<div class="page-header"><h3>Change  Icons &  Logo</h3><hr class="notop"></div>
+<h3>
+	Goto res&gt;drawable-hdpi&nbsp;folder of your project expand it</h3>
+<p>
+	To Replace</p>
+<ol>
+	<li>
+		Logo - replace &quot;logo.png&quot; with the image you want to set as logo</li>
+	<li>
+		Application Icon - replace icon_launcher.png</li>
+</ol>
+<h4 id="change_icons_logo__nbsp">&nbsp;</h4>
+<h4 id="change_icons_logo__nbsp">&nbsp;</h4>
+<h4 id="change_icons_logo__nbsp">&nbsp;</h4>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/Capture2.PNG" style="width: 317px; height: 453px;"></p>
+<div>
+	&nbsp;</div>
+</section>
+<section id="change_background">
+	<div class="page-header"><h3>Change Background</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Backgrounds are stored in drawable folder of the application</li>
+	<li>
+		To change background goto drawable folder and replace &quot;bookmycabsplashscreen1.png&quot;&nbsp;</li>
+</ol>
+<h4 id="change_background__nbsp">&nbsp;</h4>
+<h4 id="change_background__nbsp">&nbsp;</h4>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/Capture2.PNG" style="width: 317px; height: 453px;"></p>
+<div>
+	&nbsp;</div>
+</section>
+<section id="change_webservices_urls">
+	<div class="page-header"><h3>Change webservices Urls</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Goto src folder of your project expand it</li>
+	<li>
+		Goto &quot;epbit.constants&quot; package</li>
+	<li>
+		Expand it and open ProjectUrls.java file and change BASE_URL</li>
+</ol>
+<p>
+	<strong>Please Note:</strong> Base URL will be <strong>yourdomainname.com/ws</strong> i.e. suffix <strong>/ws</strong> to your URL</p>
+<h4 id="change_webservices_urls__nbsp">&nbsp;</h4>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/webservices.JPG" style="width: 798px; height: 440px;"></p>
+</section>
+<section id="google_developer_console">
+	<div class="page-header"><h3>Google Developer Console</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Go on &nbsp;google developer console <strong>http://www. console.developers.google.com/</strong>.</li>
+	<li>
+		Singn up with your gmail account credential</li>
+	<li>
+		Click Create Project on left &nbsp;side.</li>
+	<li>
+		Provide your project name and click create.</li>
+	<li>
+		On successfully creation you will find following scrren.</li>
+	<li>
+		<img alt="" src="assets/images/image_13.png" style="width: 1366px; height: 768px;"></li>
+	<li>
+		On that screen you will find project id, project id is&nbsp;<strong>SENDER_ID</strong>&nbsp;in app.</li>
+	<li>
+		Click APIs and auth on left pane and select APIs.</li>
+	<li>
+		Now &nbsp;search&nbsp;<a href="/project/smiling-landing-93106/apiui/apiview/maps_android_backend/overview" ng-="" style="font-family: inherit; font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; background-color: rgb(250, 250, 250);"><span style="box-sizing: border-box; border: 0px; font-family: inherit; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: inherit; cursor: pointer;">Google</span><font color="#424242" face="inherit"><span style="box-sizing: border-box; font-style: inherit; cursor: pointer;">&nbsp;</span></font><span style="box-sizing: border-box; border: 0px; font-family: inherit; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: inherit; cursor: pointer;">Map</span><font color="#424242" face="inherit"><span style="box-sizing: border-box; font-style: inherit; cursor: pointer;">s Android&nbsp;</span></font><span style="box-sizing: border-box; border: 0px; font-family: inherit; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: inherit; cursor: pointer;">API</span><font color="#424242" face="inherit"><span style="box-sizing: border-box; font-style: inherit; cursor: pointer;">&nbsp;</span></font><span style="box-sizing: border-box; border: 0px; font-family: inherit; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: inherit; cursor: pointer;">v2</span></a><span style="color: rgb(66, 66, 66); font-family: Roboto, sans-serif; letter-spacing: 0.119999997317791px; line-height: 16px; background-color: rgb(250, 250, 250);">&nbsp; in search box and click&nbsp;</span><a href="/project/smiling-landing-93106/apiui/apiview/maps_android_backend/overview" ng-="" style="font-family: inherit; font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; background-color: rgb(250, 250, 250);"><span style="font-family: inherit; font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: inherit; text-decoration: none; cursor: pointer; background-color: rgb(250, 250, 250);">Google</span><font color="#424242" face="inherit" style="font-family: inherit; font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; background-color: rgb(250, 250, 250);"><span style="font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; cursor: pointer; background-color: rgb(250, 250, 250);">&nbsp;</span></font><span style="font-family: inherit; font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: inherit; text-decoration: none; cursor: pointer; background-color: rgb(250, 250, 250);">Map</span><font color="#424242" face="inherit" style="font-family: inherit; font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; background-color: rgb(250, 250, 250);"><span style="font-style: inherit; letter-spacing: 0.119999997317791px; line-height: 16px; box-sizing: border-box; cursor: pointer; background-color: rgb(250, 250, 250);">s Androi</span></font></a>d API v2</li>
+	<li>
+		Click enable.</li>
+	<li>
+		Similarly you have to enable&nbsp;<span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;"><a href="/project/smiling-landing-93106/apiui/apiview/placesandroid/overview" ng-="" style="box-sizing: border-box; border: 0px; font-family: Roboto, sans-serif; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px;"><span style="box-sizing: border-box; color: inherit;">Google</span>&nbsp;<span style="box-sizing: border-box; color: inherit;">Places</span>&nbsp;API for Android</a>,&nbsp;</span><span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit; background-color: rgb(250, 250, 250);"><a href="/project/smiling-landing-93106/apiui/apiview/plus/overview" ng-="" style="box-sizing: border-box; border: 0px; font-family: Roboto, sans-serif; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; background-color: rgb(250, 250, 250);"><span style="box-sizing: border-box; color: inherit;">Google</span><span style="box-sizing: border-box; color: inherit;">+</span>&nbsp;API</a>,&nbsp;</span><span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;"><a href="/project/smiling-landing-93106/apiui/apiview/googlecloudmessaging/overview" ng-="" style="box-sizing: border-box; border: 0px; font-family: Roboto, sans-serif; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px;"><span style="box-sizing: border-box; color: inherit;">Google</span>&nbsp;<span style="box-sizing: border-box; color: inherit;">Cloud</span>&nbsp;<span style="box-sizing: border-box; color: inherit;">Me</span>ssaging for Android</a>,&nbsp;</span><span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;"><a href="/project/smiling-landing-93106/apiui/apiview/places_backend/overview" ng-="" style="box-sizing: border-box; border: 0px; font-family: Roboto, sans-serif; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px;">Google&nbsp;<span style="box-sizing: border-box; color: inherit;">Plac</span>es API Web Service</a>&nbsp; by repeating from step 7 to 9.</span></li>
+	<li>
+		<span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;">Now click credential in left pane and click &nbsp;Create New Client ID.</span></li>
+	<li>
+		<span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;">Click &nbsp;installed application and click on Configure consent screen.</span></li>
+	<li>
+		<span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;">Fill your email address and application name and click save.</span></li>
+	<li>
+		<span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;">On next screen &nbsp;click installed application and android.</span></li>
+	<li>
+		<span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;">Provide your application package name and SHA1 key of your eclipse, to know about SHA1 foloe below steps-</span></li>
+</ol>
+<ul>
+	<li>
+		<span class="ng-binding" ng-bind-html="api.name|panSearchMatch:ctrl.filter" style="box-sizing: border-box; border: 0px; border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; font-family: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(66, 66, 66); text-decoration: none; cursor: pointer; letter-spacing: 0.119999997317791px; line-height: 16px; font-style: inherit; font-weight: inherit;">?Click on Window on left top of&nbsp;</span><span style="color: rgb(66, 66, 66); letter-spacing: 0.119999997317791px; line-height: 16px;">Eclipse .</span></li>
+	<li>
+		Click prefrences.</li>
+	<li>
+		<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/SHA1.JPG" style="width: 685px; height: 248px;"></li>
+	<li>
+		Click &nbsp;android on next window and select build, now you can find SHA1 fingerprint that is SHA1of eclipse</li>
+</ul>
+<p>
+	&nbsp; &nbsp; &nbsp; 16. Select enable and clik Create <strong>client id</strong>.</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp;17.Click on Create new key, select <strong>server key</strong> and click create.</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp;18.Similarly create <strong>Browser key</strong>.</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; 19.Click on Create new key, select &nbsp;<strong>Android key</strong> .</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;20.For this you have to provide SHA1;yourpackage name &nbsp;in rectangular box and click create.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_11.jpg" style="width: 671px; height: 497px;"></p>
+</section>
+<section id="change_notification_sender_id">
+	<div class="page-header"><h3>Change Notification Sender ID</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Goto src folder of your project expand it</li>
+	<li>
+		Goto epbit.gcmutils package</li>
+	<li>
+		Expand it and open IWebConstants.java file</li>
+	<li>
+		and Change&nbsp;&nbsp;<strong>SENDER_ID</strong></li>
+</ol>
+<h4 id="change_notification_sender_id_please_note_that_project_number_in_google_developer_console_is_sender_id">Please note that Project Number in google developer console is SENDER_ID</h4>
+<h4 id="change_notification_sender_id_img_alt""_src"http_wwwepbitservicescom_androidapps_bookyourcab_senderidjpg"_style"width_462px_height_130px""><img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/senderid.JPG" style="width: 462px; height: 130px;"></h4>
+<h4 id="change_notification_sender_id__nbsp">&nbsp;</h4>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="change_google_maps_api_key">
+	<div class="page-header"><h3>Change Google Maps API Key</h3><hr class="notop"></div>
+<h3>
+	To Change Google map Key</h3>
+<h4 id="change_google_maps_api_key_you_have_to_register_a_new_google_map_api_key_,_nbspif_you_need_help_nbspvisit_nbspa_href"_"_aclick_here">You have to Register a new Google Map Api Key , &nbsp;if you need help &nbsp;visit&nbsp;<a href="#">#</a>Click Here</h4>
+<ol>
+	<li>
+		Once you get &nbsp;New Key Goto Android Manifesr.xml</li>
+	<li>
+		goto application tag ,goto meta tag &nbsp;and find &quot;com.google.android.maps.v2.API_KEY&quot;</li>
+	<li>
+		replace the old key with new key&nbsp;</li>
+</ol>
+<h3>
+	Please note that &quot;key for Android Application&quot; will be your key here</h3>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/Capture4.PNG" style="width: 671px; height: 219px;"></p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="chang_google_browser_key">
+	<div class="page-header"><h3>Chang Google Browser Key</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Open epbit.constants package&nbsp;</li>
+	<li>
+		Open&nbsp;IWebConstant.java class</li>
+	<li>
+		and change&nbsp;Browser_GOOGLEAPI_KEY</li>
+</ol>
+<p>
+	<strong>Please note that &quot;key for browser applications&quot; is your key here</strong></p>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/googleBrowsrKey.JPG" style="width: 730px; height: 319px;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="set_up_web_admin_panel">
+	<div class="page-header"><h3>Set up Web Admin Panel</h3><hr class="notop"></div>
+<p>
+	In the Source Code you have downloaded, there is a folder named &quot;cabbooking-PHP&quot;. This folder contains the source code for web admin panel.</p>
+<p>
+	To set up Wed Admin, you will required</p>
+<ul>
+	<li>
+		PHP enabeled Server - (Linux server recommended)</li>
+	<li>
+		MySQL database . version 5.3 or above</li>
+	<li>
+		A total server space of &nbsp;minimum 1 GB to host web admin files and user generated data</li>
+</ul>
+</section>
+<section id="set_up_database">
+	<div class="page-header"><h3>Set Up Database</h3><hr class="notop"></div>
+<ul>
+	<li>
+		To set up database, first create a mySQL databae on your server using phpmyadmin or any other tool.</li>
+	<li>
+		In the &quot;cabbooking-PHP&quot; folder, there is a SQL file called&nbsp;<strong>cabbookingccv2.sql</strong></li>
+	<li>
+		<strong>Import</strong> this file in your newly created database through phpmyadmin import as shown in figure below.</li>
+</ul>
+<p>
+	<img alt="" src="assets/images/image_12.jpg" style="width: 1000px; height: 376px;"></p>
+</section>
+<section id="upload_and_set_up_php_admin">
+	<div class="page-header"><h3>Upload and Set UP PHP Admin</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Upload the contents of folder -&nbsp;<strong>cabbooking-PHP&nbsp;</strong>- to the root or any folder of your server via filezilla or any FTP client.</li>
+	<li>
+		Go to admin &gt; includes &gt;&nbsp;config.inc.php and eng_config.inc.php and open these two files in IDE</li>
+	<li>
+		Change the Connection string for database, root path and admin details for your APP as shown in figure below</li>
+</ol>
+<p>
+	<img alt="" src="assets/images/image_10.jpg"></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	4. Go to&nbsp;includes &gt; config.php and open this file in IDE</p>
+<p style="margin-left: 40px;">
+	5.Change the Connection string for database, and GOOGLE API KEY -</p>
+<ul>
+	<li>
+		<strong>Database details should be same as in previous step and </strong></li>
+	<li>
+		<strong>GOOGLE MAP API KEY should Will be key for server application in google developer console</strong></li>
+	<li>
+		<strong>Please note that the folder profile_pic should have write permissions.</strong></li>
+</ul>
+</section>
+<section id="change_layout_of_pages_via_webservices">
+	<div class="page-header"><h3>Change layout of pages via webservices</h3><hr class="notop"></div>
+<p>
+	All the webservices that are being called in APP are in <strong>ws</strong> folder of php application i.e. In the folder -&nbsp;<strong>cabbooking-PHP</strong></p>
+<p>
+	For the list of webservices, you can refer to the &nbsp;&quot;Change Webservices URLS&quot; Section</p>
+<p>
+	- To change the look and feel of the pages that are called via webservices, you can change the webservices script on respective php page, its css in CSS folder and its javascript/jquery in JS folder, which ever applicable.</p>
+<p>
+	- To change Logo and images go to folder &nbsp;images &gt; and change the respective images</p>
+</section>
+<section id="change_paypal_key">
+	<div class="page-header"><h3>Change PayPal Key</h3><hr class="notop"></div>
+<p>
+	<span style="font-size: 12px;">The payments in this project are processed via Paypal.</span></p>
+<p>
+	&nbsp;</p>
+<ol>
+	<li>
+		<span style="font-size: 12px;">You have to Register a new Paypal Api Key , &nbsp;if you need help &nbsp;visit&nbsp;</span><a href="#" style="font-size: 12px;">#</a><span style="font-size: 12px;">Click Here</span></li>
+	<li>
+		Once you get &nbsp;New Key Goto &quot;epbit.helper&quot; package&nbsp;</li>
+	<li>
+		&nbsp;goto MyPAYPALService change&nbsp;CONFIG_CLIENT_ID</li>
+</ol>
+<h4 id="change_paypal_key__nbsp">&nbsp;</h4>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/Paypalclientid.JPG" style="width: 980px; height: 260px;"></p>
+</section>
+<section id="paypal_live_implementation">
+	<div class="page-header"><h3>PayPal Live Implementation</h3><hr class="notop"></div>
+<p>
+	1.Open your projects epbit.helper package.</p>
+<p>
+	2.Open MypPayPalServices.java &nbsp;</p>
+<p>
+	3. Generate credentail for live app</p>
+<p>
+	4.change client id and</p>
+<p>
+	5. and CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_PRODUCTION;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="http://www.epbitservices.com/androidapps/bookyourcab/paypal_live.JPG"  ></p>
+<p>
+	&nbsp;</p>
+</section>
+
+	</div>
+</body>
+</html>
